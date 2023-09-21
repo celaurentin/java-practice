@@ -13,5 +13,7 @@
 
 [StackFromQueue](https://github.com/celaurentin/java-practice/blob/main/src/StackFromQueue.java)
 
+[Booking](https://github.com/celaurentin/java-practice/blob/main/src/Booking.java)
+
 ### Running the code
 Just run the unit tests
