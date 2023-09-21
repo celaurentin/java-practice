@@ -19,5 +19,7 @@
 
 [Demolition Robot](https://github.com/celaurentin/java-practice/blob/main/src/DemolitionRobot.java)
 
+[MediaEncoder](https://github.com/celaurentin/java-practice/blob/main/src/MediaEncoder.java)
+
 ### Running the code
 Just run the unit tests
