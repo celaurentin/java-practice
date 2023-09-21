@@ -17,5 +17,7 @@
 
 [Checkers](https://github.com/celaurentin/java-practice/blob/main/src/Checkers.java)
 
+[Demolition Robot](https://github.com/celaurentin/java-practice/blob/main/src/DemolitionRobot.java)
+
 ### Running the code
 Just run the unit tests
