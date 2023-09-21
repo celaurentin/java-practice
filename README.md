@@ -15,5 +15,7 @@
 
 [Booking](https://github.com/celaurentin/java-practice/blob/main/src/Booking.java)
 
+[Checkers](https://github.com/celaurentin/java-practice/blob/main/src/Checkers.java)
+
 ### Running the code
 Just run the unit tests
