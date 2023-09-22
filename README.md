@@ -21,5 +21,7 @@
 
 [MediaEncoder](https://github.com/celaurentin/java-practice/blob/main/src/MediaEncoder.java)
 
+[EightHouses](https://github.com/celaurentin/java-practice/blob/main/src/EightHouses.java)
+
 ### Running the code
 Just run the unit tests
