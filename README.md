@@ -23,5 +23,7 @@
 
 [EightHouses](https://github.com/celaurentin/java-practice/blob/main/src/EightHouses.java)
 
+[Nathan](https://github.com/celaurentin/java-practice/blob/main/src/Nathan.java)
+
 ### Running the code
 Just run the unit tests
