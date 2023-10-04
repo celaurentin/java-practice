@@ -1,5 +1,4 @@
 import java.util.LinkedList;
-import java.util.List;
 
 /*
 -Problem: You are in charge of preparing a recently purchased lot for one of Amazon's new building. The lot is covered
@@ -45,24 +44,17 @@ Date: 04/13/2019
 public class DemolitionRobot {
 
     // METHOD SIGNATURE BEGINS, THIS METHOD IS REQUIRED
-    public int removeObstacle(int numRows, int numColumns, List<List<Integer>> lot)
+    public int removeObstacle(int numRows, int numColumns, int[][] rawLot)
     {
         // WRITE YOUR CODE HERE
 
-        // Step 0: Normalize data set
-        Integer[][] rawLot = lot.stream().map(u -> u.toArray(new Integer[0])).toArray(Integer[][]::new);
-
-        // Marking blocked cells as visited.
+        // Marking blocked cells (trenches) as visited.
         boolean[][] visited = new boolean[numRows][numColumns];
         for (int i = 0; i < numRows; i++) {
             for (int j = 0; j < numColumns; j++)
             {
-                if (rawLot[i][j] == 0) {
-                    // A trench can not be visited
-                    visited[i][j] = true;
-                } else {
-                    visited[i][j] = false;
-                }
+                // A trench can not be visited
+                visited[i][j] = rawLot[i][j] == 0;
             }
         }
 
