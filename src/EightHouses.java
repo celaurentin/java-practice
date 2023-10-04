@@ -27,7 +27,8 @@ Expected return value: 0 1 0 0 1 0 1 0
 
 -Test case 2:
 Input: [1,1,1,0,1,1,1,1], 2
-Expected return value: 0 0 0 0 0 1 1 0
+                       1 0 1 0 1 0 0 1   Day 1
+Expected return value: 0 0 0 0 0 1 1 0   Day 2
 
 ----
 Date: 04/13/2019
@@ -35,10 +36,10 @@ Date: 04/13/2019
  */
 public class EightHouses {
 
-    public List<Integer> cellCompete(Integer[] currentStates, int days)
+    public int[] cellCompete(int[] currentStates, int days)
     {
         // WRITE YOUR CODE HERE
-        Integer[] nextDayStates = new Integer[8];
+        int[] nextDayStates = new int[8];
 
         while (days > 0) {
 
@@ -69,6 +70,6 @@ public class EightHouses {
             currentStates = Arrays.copyOf(nextDayStates,8);
             days--;
         }
-        return Arrays.asList(currentStates);
+        return currentStates;
     }
 }
