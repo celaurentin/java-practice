@@ -8,7 +8,7 @@ class SegmentsTest {
 
     @Test
     void countSegments() {
-        String s1 = "Hello, my name is    John";
+        String s1 = " Hello, my name is    John";
         String s2 = "Hello ";
         String s3 = "";
         assertEquals(5, seg.countSegments(s1));
