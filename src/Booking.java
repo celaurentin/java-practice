@@ -46,6 +46,8 @@ Date: 02/03/2019
 ----
  */
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.StringTokenizer;
 
 public class Booking {
@@ -70,13 +72,13 @@ public class Booking {
         int takenCounter =0;
         for (int i=1; i<N+1; i++) {
             if (booking[i][0]==1 || booking[i][1]==1 || booking[i][2]==1) {
-                takenCounter+=1;
+                takenCounter++;
             }
             if (booking[i][7]==1 || booking[i][8]==1 || booking[i][9]==1) {
-                takenCounter+=1;
+                takenCounter++;
             }
             if ((booking[i][4]==1 || booking[i][5]==1) || (booking[i][3]==1 && booking[i][6]==1)) {
-                takenCounter+=1;
+                takenCounter++;
             }
         }
         return (totalConsecutiveSpots - takenCounter);
