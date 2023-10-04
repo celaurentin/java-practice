@@ -6,10 +6,10 @@ import java.util.*;
  *  start sessionA, command1,command2,command1, command3    => 3 commands
  *  start sessionB, command1,command2,command1, command3    => 3 commands
  *  start sessionA, command1,command23,command11, command3  => 4 commands
- *  start sessionC, command1,command2,command1, command3    => 3 commands
+ *  start sessionB, command1,command2,command1, command3    => 3 commands
  */
 public class Commands {
-    public Integer maximumUniqueCommands(List<String> logs) {
+    public String getSessionWithMaximumUniqueCommands(List<String> logs) {
         String rawSessionAndCommands;
         Map<String, Integer> sessionCounter = new HashMap<>();
         for( String line: logs){
@@ -28,6 +28,15 @@ public class Commands {
                 sessionCounter.put(session,uniqueCommands.size());
             }
         }
-        return Collections.max(sessionCounter.values());
+
+        String sessionWithMaxCommands = "";
+        Integer maxCommands = 0;
+        for (Map.Entry<String, Integer> entry: sessionCounter.entrySet()) {
+            if (entry.getValue()>maxCommands) {
+                maxCommands = entry.getValue();
+                sessionWithMaxCommands = entry.getKey();
+            }
+        }
+        return sessionWithMaxCommands;
     }
 }

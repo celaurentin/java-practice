@@ -15,8 +15,8 @@ class CommandsTest {
         logs.add("start sessionA, command1,command2,command1, command3");
         logs.add("start sessionB, command1,command2,command1, command3");
         logs.add("start sessionA, command1,command23,command11, command3");
-        logs.add("start sessionC, command1,command2,command1, command3");
+        logs.add("start sessionB, command1,command2,command4, command3, command10");
 
-        assertEquals(4, commands.maximumUniqueCommands(logs));
+        assertEquals("sessionB", commands.getSessionWithMaximumUniqueCommands(logs));
     }
 }
