@@ -84,8 +84,6 @@ public class AcceptLanguage {
     }
 
     private static List<String> removeDuplicates(List<String> results) {
-        return results.stream()
-                .distinct()
-                .collect(Collectors.toList());
+        return new ArrayList<>(new LinkedHashSet<>(results));
     }
 }
