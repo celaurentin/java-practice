@@ -31,5 +31,7 @@
 
 [FrogJump](https://github.com/celaurentin/java-practice/blob/main/src/FrogJump.java)
 
+[Chop](https://github.com/celaurentin/java-practice/blob/main/src/Chop.java)
+
 ### Running the code
 Just run the unit tests
