@@ -32,7 +32,7 @@ import java.util.*;
  */
 
 public class Checkers {
-    private static final int MAX_ROWS = 4;
+    private static final int MAX_N = 4;
 
     public static void main(String[] args) {
 
@@ -40,25 +40,25 @@ public class Checkers {
          * row0  null, null, null, null
          * row1  null, null,  null,  O
          * row2  null, null,  X,   null
-         * row3  null, null, null,  O
+         * row3  null, O, null,  O
          */
         Checker[][] board = new Checker[4][4];
         board[1][3] = new Checker("O", 1, 3);
+        board[3][1] = new Checker("O", 3, 1);
         board[3][3] = new Checker("O", 3, 3);
         board[2][2] = new Checker("X", 2, 2);
 
-        //printBoard(board);
-        String player = "O";
-        System.out.println("Plays: " + player);
-        for (Move m : getAllMovesByPlayer(player, board)) {
+        String playerLabel = "O";
+        System.out.println("Plays: " + playerLabel);
+        for (Move m : getAllMovesByPlayer(playerLabel, board)) {
             System.out.println(m.toString());
         }
     }
 
     private static List<Move> getAllMovesByPlayer(String playerLabel, Checker[][] board) {
         List<Move> result = new ArrayList<>();
-        for (int i = 0; i < MAX_ROWS; i++) {
-            for (int j = 0; j < MAX_ROWS; j++) {
+        for (int i = 0; i < MAX_N; i++) {
+            for (int j = 0; j < MAX_N; j++) {
                 if (board[i][j] != null && board[i][j].getLabel().equals(playerLabel)) {
                     result.addAll(getAllMovesByChecker(board[i][j], board));
                 }
@@ -116,33 +116,22 @@ public class Checkers {
             Checker[][] board
     ) {
         List<Move> result = new ArrayList<>();
-        if (row >= 0 && row < MAX_ROWS && col >= 0 && col < MAX_ROWS) if (board[row][col] == null) {
-            result.add(new Move(c.getRow(), c.getCol(), row, col, "A"));
-        } else {
-            if (!board[row][col].getLabel().equalsIgnoreCase(c.getLabel())) {
-                if (nextRow >= 0 && nextRow < MAX_ROWS && nextCol >= 0 && nextCol < MAX_ROWS &&
-                        board[nextRow][nextCol] == null) {
-                    result.add(new Move(c.getRow(), c.getCol(), nextRow, nextCol, "C"));
+        if (row >= 0 && row < MAX_N && col >= 0 && col < MAX_N)
+            if (board[row][col] == null) {
+                result.add(new Move(c.getRow(), c.getCol(), row, col, MoveType.ADVANCE));
+            } else {
+                if (!board[row][col].getLabel().equalsIgnoreCase(c.getLabel())) {
+                    if (nextRow >= 0 && nextRow < MAX_N && nextCol >= 0 && nextCol < MAX_N &&
+                            board[nextRow][nextCol] == null) {
+                        result.add(new Move(c.getRow(), c.getCol(), nextRow, nextCol, MoveType.CAPTURE));
+                    }
                 }
             }
-        }
         return result;
     }
 
-    private static void printBoard(Checker[][] board) {
-        Checker c = new Checker();
-        for (int j = 0; j < 4; j++) {
-            for (int i = 0; i < 4; i++) {
-                c = board[i][j];
-                if (c == null) System.out.println(i + "," + j + "= empty");
-                else System.out.println(i + "," + j + "= " + c.label);
-            }
-        }
-        System.out.println("---");
-    }
-
     private static class Checker {
-        String label;  // X or Y
+        String label;  // X or O
         int row;
         int col;
 
@@ -180,22 +169,26 @@ public class Checkers {
         }
     }
 
+    enum MoveType {
+        ADVANCE,
+        CAPTURE
+    }
     private static class Move {
         int startX;
         int startY;
         int endX;
         int endY;
-        String type; // A: single advance, C: capture
+        MoveType moveType;
 
         public Move() {
         }
 
-        public Move(int startX, int startY, int endX, int endY, String type) {
+        public Move(int startX, int startY, int endX, int endY, MoveType moveType) {
             this.startX = startX;
             this.startY = startY;
             this.endX = endX;
             this.endY = endY;
-            this.type = type;
+            this.moveType = moveType;
 
         }
 
@@ -231,17 +224,17 @@ public class Checkers {
             this.endY = endY;
         }
 
-        public String getType() {
-            return type;
+        public MoveType getMoveType() {
+            return moveType;
         }
 
-        public void setType(String type) {
-            this.type = type;
+        public void setMoveType(MoveType moveType) {
+            this.moveType = moveType;
         }
 
         public String toString() {
             return "From: (" + this.startX + "," + this.startY + ")" + " To: (" + this.endX + "," + this.endY + ") " +
-                    "Type: " + this.type;
+                    "Type: " + this.moveType;
 
         }
     }
