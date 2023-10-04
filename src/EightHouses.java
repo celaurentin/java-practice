@@ -1,5 +1,4 @@
 import java.util.Arrays;
-import java.util.List;
 
 /*
 -Problem: Eight houses, represented as cells, are arranged in a straight line. Each day every cell competes with its
