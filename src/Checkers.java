@@ -6,9 +6,9 @@
 // |██X ██X ██X ██X |
 // |  ██  ██  ██  ██|
 // |██  ██  ██  ██  |
-// |Y ██Y ██Y ██Y ██|row 5
-// |██Y ██Y ██Y ██Y |
-// |Y ██Y ██Y ██Y ██|
+// |O ██O ██O ██O ██|row 5
+// |██O ██O ██O ██O |
+// |O ██O ██O ██O ██|
 
 // Pieces can only move 1 space diagonally towards their forward direction. "X" pieces must move downwards, and "O"
 // pieces must move upwards.
@@ -90,13 +90,9 @@ public class Checkers {
         nextRightCol = rightCol + 1;
         leftCol = c.getCol() - 1;
         nextLeftCol = leftCol - 1;
-        if (direction < 0) {
-            newRow = c.getRow() - 1;
-            nextNewRow = newRow - 1;
-        } else {
-            newRow = c.getRow() + 1;
-            nextNewRow = newRow + 1;
-        }
+
+        newRow = c.getRow() + direction;
+        nextNewRow = newRow + direction;
 
         // check left
         result = checkLeftAndRightMoves(newRow, leftCol, c, nextNewRow, nextLeftCol, board);
