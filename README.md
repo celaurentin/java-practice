@@ -27,5 +27,9 @@
 
 [AcceptLanguage](https://github.com/celaurentin/java-practice/blob/main/src/AcceptLanguage.java)
 
+[Segments](https://github.com/celaurentin/java-practice/blob/main/src/Segments.java)
+
+[FrogJump](https://github.com/celaurentin/java-practice/blob/main/src/FrogJump.java)
+
 ### Running the code
 Just run the unit tests
