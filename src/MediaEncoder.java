@@ -1,6 +1,4 @@
 import java.util.Arrays;
-import java.util.List;
-import java.util.stream.IntStream;
 
 /*
 -Problem: Amazon Media Encoder is a highly scalable, easy to use and cost-effective way for developers and businesses
@@ -31,14 +29,13 @@ Constrains:
 Input:
 numOfSubFiles= 4
 files= [8, 4, 6, 12]
-
 Expected return value: 58
 
 Explanation: The optimal way to merge the sub files is as follows:
 Step 1: Merge the files of size 4 and 6 (time required is 10), after merging: [8, 10, 12]
 Step 2: Merge the files of size 8 and 10 (time required is 18), after merging: [18, 12]
 Step 3: Merge the files of size 18 and 12 (time required is 30)
-Total time required to merge the files is 10 + 18 + 30 = 58
+Total time required to merge the files is 10 + (10+8) + (18+12) = 58
 
 ----
 Date: 04/13/2019
@@ -47,14 +44,13 @@ Date: 04/13/2019
 public class MediaEncoder {
 
     // METHOD SIGNATURE BEGINS, THIS METHOD IS REQUIRED
-    static int minimumTime(int numOfSubFiles, List<Integer> files)
+    public int minimumTime(int numOfSubFiles, int[] inputFiles)
     {
         // WRITE YOUR CODE HERE
-        // Step 0: Normalize and sorting data set
-        int[] inputFiles = files.stream().mapToInt(Integer::intValue).toArray();
+        // Step 0: Sorting data set
         Arrays.sort(inputFiles);
 
-        int[] partialTimes = new int[numOfSubFiles];
+        int[] partialTimes = new int[numOfSubFiles-1];
 
         // Step 1: Traverse the sorted list and compute partial times in pairs
         int prev = inputFiles[0];
@@ -63,9 +59,12 @@ public class MediaEncoder {
             prev = partialTimes[i-1];
         }
 
-        // Step 3: Compute the total time consumed (minimum)
-        IntStream partialTimeStream = Arrays.stream(partialTimes);
-        return partialTimeStream.reduce(0, Integer::sum);
+        // Step 3: Compute the minimum total time consumed
+        int totalTime = 0;
+        for (int time: partialTimes){
+            totalTime += time;
+        }
+        return totalTime;
 
     }
     // METHOD SIGNATURE ENDS
