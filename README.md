@@ -33,5 +33,7 @@
 
 [Chop](https://github.com/celaurentin/java-practice/blob/main/src/Chop.java)
 
+[TreeTraversal](https://github.com/celaurentin/java-practice/blob/main/src/TreeTraversal.java)
+
 ### Running the code
 Just run the unit tests
