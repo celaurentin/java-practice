@@ -6,7 +6,7 @@
  *                            [6]           [2]
  *                        [9]     -1   [10]     \\
  *
- * Write a function that determines weather the left or right branch of the tree is
+ * Write a function that determines whether the left or right branch of the tree is
  * larger. The size of each branch s the sum of the node values. The function should
  * return the string "Right" if the right side is larger and "Left" if the left side
  * is larger. If the tree has 0 nodes or if the size of hte branches are equal, then
