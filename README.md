@@ -37,5 +37,7 @@
 
 [CommonItems](https://github.com/celaurentin/java-practice/blob/main/src/CommonItems.java)
 
+[CommonChar](https://github.com/celaurentin/java-practice/blob/main/src/CommonChar.java)
+
 ### Running the code
 Just run the unit tests
