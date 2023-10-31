@@ -39,5 +39,7 @@
 
 [CommonChar](https://github.com/celaurentin/java-practice/blob/main/src/CommonChar.java)
 
+[DecryptMessage](https://github.com/celaurentin/java-practice/blob/main/src/DecryptMessage.java)
+
 ### Running the code
 Just run the unit tests
