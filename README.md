@@ -35,5 +35,7 @@
 
 [TreeTraversal](https://github.com/celaurentin/java-practice/blob/main/src/TreeTraversal.java)
 
+[CommonItems](https://github.com/celaurentin/java-practice/blob/main/src/CommonItems.java)
+
 ### Running the code
 Just run the unit tests
