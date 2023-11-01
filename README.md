@@ -41,7 +41,9 @@
 
 [DecryptMessage](https://github.com/celaurentin/java-practice/blob/main/src/DecryptMessage.java)
 
-[Digits](https://github.com/celaurentin/java-practice/blob/main/src/DigitsTest.java)
+[Digits](https://github.com/celaurentin/java-practice/blob/main/src/Digits.java)
+
+[FirstNonRepeatingChar](https://github.com/celaurentin/java-practice/blob/main/src/FirstNonRepeatingChar.java)
 
 ### Running the code
 Just run the unit tests
