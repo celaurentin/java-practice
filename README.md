@@ -45,5 +45,7 @@
 
 [FirstNonRepeatingChar](https://github.com/celaurentin/java-practice/blob/main/src/FirstNonRepeatingChar.java)
 
+[RotateMatrix](https://github.com/celaurentin/java-practice/blob/main/src/RotateMatrix.java)
+
 ### Running the code
 Just run the unit tests
