@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-class ThriveTest {
+class CommonCharTest {
     CommonChar t = new CommonChar();
 
     @Test
