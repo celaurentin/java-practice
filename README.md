@@ -51,5 +51,7 @@
 
 [Palindrome](https://github.com/celaurentin/java-practice/blob/main/src/Palindrome.java)
 
+[TwoSum](https://github.com/celaurentin/java-practice/blob/main/src/TwoSum.java)
+
 ### Running the code
 Just run the unit tests
