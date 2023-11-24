@@ -49,5 +49,7 @@
 
 [Brackets](https://github.com/celaurentin/java-practice/blob/main/src/Brackets.java)
 
+[Palindrome](https://github.com/celaurentin/java-practice/blob/main/src/Palindrome.java)
+
 ### Running the code
 Just run the unit tests
