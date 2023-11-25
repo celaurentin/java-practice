@@ -54,7 +54,6 @@
 // returns: ["fr-FR", "fr-CA", "en-US"]
 
 import java.util.*;
-import java.util.stream.Collectors;
 
 public class AcceptLanguage {
 
