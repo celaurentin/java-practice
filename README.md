@@ -53,5 +53,7 @@
 
 [TwoSum](https://github.com/celaurentin/java-practice/blob/main/src/TwoSum.java)
 
+[RomanToInt](https://github.com/celaurentin/java-practice/blob/main/src/RomanToInt.java)
+
 ### Running the code
 Just run the unit tests
