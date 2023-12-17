@@ -57,5 +57,7 @@
 
 [AddTwoNumbers](https://github.com/celaurentin/java-practice/blob/main/src/AddTwoNumbers.java)
 
+[TraverseMaze](https://github.com/celaurentin/java-practice/blob/main/src/TraverseMaze.java)
+
 ### Running the code
 Just run the unit tests
