@@ -63,5 +63,7 @@
 
 [IntersectionArrays](https://github.com/celaurentin/java-practice/blob/main/src/IntersectionArrays.java)
 
+[MatrixMaxOccurrence](https://github.com/celaurentin/java-practice/blob/main/src/MatrixMaxOccurrence.java)
+
 ### Running the code
 Just run the unit tests
