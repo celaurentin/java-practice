@@ -59,5 +59,7 @@
 
 [TraverseMaze](https://github.com/celaurentin/java-practice/blob/main/src/TraverseMaze.java)
 
+[Apartments](https://github.com/celaurentin/java-practice/blob/main/src/Apartments.java)
+
 ### Running the code
 Just run the unit tests

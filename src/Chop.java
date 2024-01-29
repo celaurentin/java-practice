@@ -9,9 +9,9 @@ public class Chop {
         int right = data.length - 1;
         while (left <= right) {
             int m = (left + right) / 2;
-            if (data[m] == target) return m;
-            if (data[m] > target) right = m - 1;
-            else left = m + 1;
+            if (target == data[m]) return m;
+            else if (target > data[m]) left = m + 1;
+            else right = m - 1;
         }
 
         return -1;
