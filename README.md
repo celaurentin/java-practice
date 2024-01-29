@@ -61,5 +61,7 @@
 
 [Apartments](https://github.com/celaurentin/java-practice/blob/main/src/Apartments.java)
 
+[IntersectionArrays](https://github.com/celaurentin/java-practice/blob/main/src/IntersectionArrays.java)
+
 ### Running the code
 Just run the unit tests
