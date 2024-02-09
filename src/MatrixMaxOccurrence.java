@@ -24,15 +24,14 @@ public class MatrixMaxOccurrence {
         int counter = 0;
         for (int i=0; i<rows; i++ ){
             if (target>=matrix[i][0] && target<=matrix[i][cols-1]) {
-                counter += getOccurrence(matrix, i, target);
+                counter += getOccurrence(matrix[i], target);
             }
         }
         return counter;
     }
 
     // Binary search - target could be present just once per row
-    private int getOccurrence(int[][] matrix, int i, int target){
-        int[] row = matrix[i];
+    private int getOccurrence(int[] row, int target){
         int left = 0;
         int right = row.length;
 
